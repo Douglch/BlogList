@@ -10,6 +10,7 @@ userRouter.get('/', async (request, response) => {
     response.json(users)
 })
 
+// Create new user
 userRouter.post('/', async (request, response) => {
     const { username, name, password } = request.body
 
