@@ -5,7 +5,7 @@ import blogService from "./services/blogs";
 import BlogForm from "./components/BlogForm";
 import LoginForm from "./components/LoginForm";
 import loginService from "./services/login";
-import Togglable from "./components/Toggleable";
+import Togglable from "./components/Togglable";
 
 const App = () => {
   const [blogs, setBlogs] = useState([]);
@@ -85,7 +85,7 @@ const App = () => {
             Log out
           </button>
           <Togglable ref={blogFormRef} buttonLabel="new blog">
-            <BlogForm createBlog={createBlog} blogs={blogs} />
+            <BlogForm createBlog={createBlog} blogLength={blogs.length} />
           </Togglable>
         </div>
       )}
